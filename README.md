@@ -1,5 +1,6 @@
 # vcf-to-wegene
 
+### Uasge
 ```
 usage: vcf_to_wegene.py [-h] -i INPUT -b BLANK [-o OUTPUT]
 
@@ -13,4 +14,9 @@ optional arguments:
                         wegene/23andMe format file without GT [requested]
   -o OUTPUT, --output OUTPUT
                         output wegene/23andMe format file
+```
+
+### 示例:
+```
+python vcf_to_wegene.py -i input.allsite.vcf.gz -b wegene_blank.txt.gz -o out.wegene.txt
 ```
