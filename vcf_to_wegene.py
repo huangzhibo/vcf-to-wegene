@@ -25,7 +25,7 @@ class AllsiteVcf:
                 first, second = rec.samples.get(0)['GT']
                 if first is None:   # 跳过nocall位点 ./.
                     continue
-                if rec.filter.keys()[0] != '.' and rec.filter.keys()[0] != 'PASS':
+                if rec.filter.keys() and rec.filter.keys()[0] != '.' and rec.filter.keys()[0] != 'PASS':
                     continue
                 if rec.samples.get(0).get('GQ') and rec.samples.get(0).get('GQ') < 20:
                     continue
